@@ -1,0 +1,11 @@
+<h1>welcome to nocapsville</h1>
+<h3>it could be worse if there was no punctuation either...</h3>
+<ul>
+<% @posts.each do |post| %>
+	<li>
+		<h2><a href="/posts/<%=post.id %>"><%=post.title %></a>
+		<span><%= pretty_date(post.created_at) %></span>
+		</h2>
+	</li>
+	<% end %>
+</ul>
